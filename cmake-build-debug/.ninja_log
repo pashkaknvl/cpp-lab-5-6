@@ -1,0 +1,5 @@
+# ninja log v5
+0	386	7245617292384717	CMakeFiles/cpp_lab_5_6.dir/main.cpp.obj	35849c94f4455c3e
+1	383	7245617503721845	CMakeFiles/cpp_lab_5_6.dir/main.cpp.obj	35849c94f4455c3e
+12	411	7245617504000341	CMakeFiles/cpp_lab_5_6.dir/Drug.cpp.obj	2d075e4b3b898fb0
+411	613	7245617506000641	cpp_lab_5_6.exe	ee59d07ce5c55e68
