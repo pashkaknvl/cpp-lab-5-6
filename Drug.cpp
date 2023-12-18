@@ -42,11 +42,17 @@ long double RatioRecipeInCountry(const Drug drug[], std::string CountryName, siz
             else
                 no++;
     }
-    result = yes / no;
+    if (no != 0 and yes != 0)
+        result = yes / no;
+    else
+        if(no == 0)
+            result = yes;
+        else
+            result = no;
     return result;
 }
 
-std::string MostExpensiveInCounry(const Drug drug[], std::string CountryName, size_t CountOfDrugs) {
+std::string MostExpensiveInCountry(const Drug drug[], std::string CountryName, size_t CountOfDrugs) {
     std::string max_price_name = "";
     long double max_price = 0;
     for (int i = 0; i < CountOfDrugs; i++){

@@ -40,13 +40,33 @@ public:
         this-> country = newCountry;
         this-> type = newType;
     }
+
+    void printName() const { std::cout << "Name: " << name << std::endl; }
+    void printPrice() const { std::cout << "Price: " << price << std::endl; }
+    void printRecipe() const {
+        if (recipe == true)
+            std::cout << "Recipe?: " << "Yes" << std::endl;
+        else
+            std::cout << "Recipe?: " << "No" << std::endl;
+    }
+    void printCountry() const { std::cout << "Country: " << country << std::endl; }
+    void printType() const { std::cout << "Type: " << type << std::endl; }
+    void printAllInfo() const {
+        std::cout << "Name: " << name << std::endl;
+        std::cout << "Price: " << price << std::endl;
+        if (recipe == true)
+            std::cout << "Recipe?: " << "Yes" << std::endl;
+        else
+            std::cout << "Recipe?: " << "No" << std::endl;
+        std::cout << "Country: " << country << std::endl;
+        std::cout << "Type: " << type << std::endl;
+    }
 };
 
-std::ostream &operator<<(std::ostream &out, const Drug &drug);
-
-std::string MostExpensiveInCounry(const Drug drug[], std::string CountryName, size_t CountOfDrugs);
+std::string MostExpensiveInCountry(const Drug drug[], std::string CountryName, size_t CountOfDrugs);
 long double RatioRecipeInCountry(const Drug drug[], std::string CountryName, size_t CountOfDrugs);
-void ListOfDrugsOfOneType(const Drug drug[], std::string type[], int CountOfDrugs);
+void ListOfDrugsOfOneType(const Drug drug[], std::string type[], size_t N, size_t CountOfDrugs);
+
 
 
 #endif //CPP_LAB_5_6_DRUG_H
